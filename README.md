@@ -12,8 +12,6 @@ Completed user stories:
 * [x] Optional: Login button should show animate the login form over the view controller.
 * [x] Optional: Discover bubble should bob up and down unless the SearchViewController is tapped.
 
-Note: I couldn't get the custom modal transition to work, so used the cross-fade option instead.
-
 ![Video Walkthrough](tumblr_demo.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/)
