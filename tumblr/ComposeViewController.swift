@@ -66,20 +66,20 @@ class ComposeViewController: UIViewController {
     
 
     @IBAction func onNevermind(sender: AnyObject) {
-        UIView.animateWithDuration(0.3, delay: 0, options: [.CurveEaseOut], animations: { () -> Void in
+        UIView.animateWithDuration(0.3, delay: 0, options: [.CurveEaseIn], animations: { () -> Void in
             self.photoView.center.y = self.hiddenTop
             }, completion: nil)
-        UIView.animateWithDuration(0.3, delay: 0.1, options: [.CurveEaseOut], animations: { () -> Void in
+        UIView.animateWithDuration(0.3, delay: 0.1, options: [.CurveEaseIn], animations: { () -> Void in
             self.textView.center.y = self.hiddenTop       }, completion: nil)
-        UIView.animateWithDuration(0.3, delay: 0.2, options: [.CurveEaseOut], animations: { () -> Void in
+        UIView.animateWithDuration(0.3, delay: 0.2, options: [.CurveEaseIn], animations: { () -> Void in
             self.quoteView.center.y = self.hiddenTop
             }, completion: nil)
-        UIView.animateWithDuration(0.3, delay: 0.3, options: [.CurveEaseOut], animations: { () -> Void in
+        UIView.animateWithDuration(0.3, delay: 0.3, options: [.CurveEaseIn], animations: { () -> Void in
             self.chatView.center.y = self.hiddenTop
             }, completion: nil)
-        UIView.animateWithDuration(0.3, delay: 0.4, options: [.CurveEaseOut], animations: { () -> Void in
+        UIView.animateWithDuration(0.3, delay: 0.4, options: [.CurveEaseIn], animations: { () -> Void in
             self.linkView.center.y = self.hiddenTop           }, completion: nil)
-        UIView.animateWithDuration(0.3, delay: 0.5, options: [.CurveEaseOut], animations: { () -> Void in
+        UIView.animateWithDuration(0.3, delay: 0.5, options: [.CurveEaseIn], animations: { () -> Void in
             self.videoView.center.y = self.hiddenTop
             }, completion: nil)
         delay(0.8) { () -> () in

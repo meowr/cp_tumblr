@@ -20,22 +20,23 @@ class ViewController: UIViewController {
     var trendingViewController: UIViewController!
     var composeViewController: UIViewController!
     var viewContollers: [UIViewController]!
-    var selectedIndex: Int = 0
+    var selectedIndex: Int!
     var bubbleOriginalCenter: CGPoint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        selectedIndex = 0
         homeViewController = storyboard.instantiateViewControllerWithIdentifier("homeViewController")
         searchViewController = storyboard.instantiateViewControllerWithIdentifier("searchViewController")
         accountViewController = storyboard.instantiateViewControllerWithIdentifier("accountViewController")
         trendingViewController = storyboard.instantiateViewControllerWithIdentifier("trendingViewController")
         composeViewController = storyboard.instantiateViewControllerWithIdentifier("composeViewController")
         viewContollers = [homeViewController, searchViewController, accountViewController, trendingViewController]
-        buttons[selectedIndex].selected = true
-        didPressTab(buttons[selectedIndex])
         bubbleView.hidden = true
         bubbleOriginalCenter = bubbleView.center
+        buttons[selectedIndex].selected = true
+        didPressTab(buttons[selectedIndex])
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,7 +62,7 @@ class ViewController: UIViewController {
         contentView.addSubview(vc.view)
         vc.didMoveToParentViewController(self)
         
-        if selectedIndex == 1 {
+        if selectedIndex != 1 {
             bubbleView.hidden = false
             UIView.animateWithDuration(0.5, delay: 0, options: [.Repeat, .Autoreverse], animations: { () -> Void in
                 self.bubbleView.center.y = self.bubbleOriginalCenter.y - 5
